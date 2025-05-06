@@ -28,13 +28,17 @@ mvnw.cmd spring-boot:run -pl demo-application
 В этом случае ожидаемо получим ошибку, так как бин не будет найден.
 
 ```bash
-./mvnw clean install spring-boot:run -pl demo-application -Dspring-boot.run.arguments="--example.starter.enabled=false"
+./mvnw clean install \
+  spring-boot:run -pl demo-application \
+  -Dspring-boot.run.arguments="--example.starter.enabled=false"
 ```
 
 Ошибка:
 
 ```text
-Consider defining a bean of type 'com.example.starter.autoconfigure.ExampleService' in your configuration.
+Consider defining a bean of type 
+'com.example.starter.autoconfigure.ExampleService'
+in your configuration.
 ```
 
 
