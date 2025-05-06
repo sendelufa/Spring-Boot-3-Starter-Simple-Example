@@ -3,11 +3,38 @@
 1. Собрать проект
 
 ```bash
-mvn clean install
+./mvnw clean install
+```
+
+Windows:
+
+```shell
+mvnw.cmd clean install
 ```
 
 2. Запустить проект
 
 ```bash
-mvn spring-boot:run -pl demo-application
+./mvnw spring-boot:run -pl demo-application
 ```
+
+Windows:
+
+```shell
+mvnw.cmd spring-boot:run -pl demo-application
+```
+
+⚠️ Как вариант, отключить автоконфигурацию и попробовать запустить.
+В этом случае ожидаемо получим ошибку, так как бин не будет найден.
+
+```bash
+./mvnw clean install spring-boot:run -pl demo-application -Dspring-boot.run.arguments="--example.starter.enabled=false"
+```
+
+Ошибка:
+
+```text
+Consider defining a bean of type 'com.example.starter.autoconfigure.ExampleService' in your configuration.
+```
+
+
