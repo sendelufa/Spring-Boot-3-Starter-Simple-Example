@@ -41,4 +41,17 @@ Consider defining a bean of type
 in your configuration.
 ```
 
+⚠️ Если возникает ошибка, убедитесь, что пересобран модуль `example-starter-autoconfigure`.
+
+Это можно сделать командой:
+
+```bash
+./mvnw clean install -pl example-starter-autoconfigure
+```
+
+или пересобрать полностью проект
+
+```bash
+./mvnw clean install
+```
 
